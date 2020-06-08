@@ -1,15 +1,15 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
+	"github.com/vindh1er/heimda11r-web/cmd"
+)
+
+var (
+	// VERSION is set during build
+	version = "dev"
+	commit  = "n/a"
 )
 
 func main() {
-	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8080", nil)
-}
-
-func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "heimda11r says hello\n")
+	cmd.Execute(version, commit)
 }
