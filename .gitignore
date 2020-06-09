@@ -1,2 +1,5 @@
 /heimda11r-web
 /pkged.go
+/cover*
+govet-report.out
+golint-report.out
